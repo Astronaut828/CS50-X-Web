@@ -1,0 +1,11 @@
+sort1 uses: Bubble sort
+
+How do you know?: The time it takes to sort increases tremendously when the amount of numbers goes up. Indicating the need to move small numbers to the left one by one.
+
+sort2 uses: Merge sort
+
+How do you know?: The sorting process uses almost the same amount of time in the smaller sorted, reversed and random list, which indicates to me that the steps taken are about the same.
+
+sort3 uses: Selection sort
+
+How do you know?: The swap time in the large random set indicates that an already sorted list is created and in that case it is taking less time than the larger random set using the Bubble sort.

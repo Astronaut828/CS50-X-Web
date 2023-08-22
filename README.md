@@ -1,2 +1,2 @@
-# CS50-X-Web
-CS50 X/Web Coursework
+# CS50x 2023
+CS50x Coursework

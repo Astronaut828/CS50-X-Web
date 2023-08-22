@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo / Radioshack</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+      .btn {
+        color: black;
+      }
+      .sun {
+        margin: auto;
+      }
+      /* Create three unequal columns that floats next to each other */
+      .column {
+        float: left;
+        padding: 10px;
+      }
+      /* Left and right column */
+      .column.side {
+        width: 25%;
+      } 
+      /* Middle column */
+      .column.middle {
+        width: 50%;
+      }
+      /* Clear floats after the columns */
+      .row::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      div.gallery {
+        margin: 100px;
+        float: auto;
+        width: 180px;
+      }
+      div.gallery img {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+      }
+      .container {
+        width: 60%;
+        margin: 2rem auto;
+      }
+      .gallery__img {
+        width: 80%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .gallery__item--1 {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 1;
+          grid-row-end: 2;
+      }
+      .gallery__item--2 {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 2;
+      }
+      .gallery__item--3 {
+          grid-column-start: 1;
+          grid-column-end: 2;
+          grid-row-start: 2;
+          grid-row-end: 3;
+      }
+      .gallery__item--4 {
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row-start: 2;
+          grid-row-end: 3;
+      }
+    </style>
+  </head>
+  <body background="big_rgrey1.gif">
+    <p></p>
+    <h3 class='RSLogo'><img src="radioshack-logo.png"></h3>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Store <br> Locator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Future <br> Activities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Press <br> Release</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">History <br> & Information</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contracts</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <p></p>
+    <div class="row">
+      <div class="column side">
+        <div class="btn-group-vertical" role="group" aria-label="Vertical radio toggle button group">
+          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+          <label class="btn btn-outline-danger" for="vbtn-radio1">United Against Crime</label>
+          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+          <label class="btn btn-outline-danger" for="vbtn-radio2">Rock and Roll Hall of Fame</label>
+          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+          <label class="btn btn-outline-danger" for="vbtn-radio3">Rock and Roll OnTour</label>
+          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+          <label class="btn btn-outline-danger" for="vbtn-radio3">Home Security</label>
+          <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+          <label class="btn btn-outline-danger" for="vbtn-radio3">TV/FM Reception</label>
+          <p></p>
+          <h4 class='sun'><img src="75.gif"></h4>
+          <p></p>
+          <h4 class='sun'><img src="sun.jpeg"></h4>
+        </div>
+      </div>
+      <div class='column middle'  align="center">
+        <h2><b>RadioShack's Latest Trends</b></h2>
+        <div class="gallery"></div>
+        <div class=”gallery”>
+          <figure class=”gallery__item gallery__item--1">
+            <img src="mac.jpeg" class="gallery__img" alt="Image 1">
+          </figure>
+          <p>Be honest. These things still look ridiculously cool. Why did the gummi-bear-colored computer trend never take off? Did we fly too close to the sun? Maybe its because you could fit 10 working computers from 2017 in one of its big, beautiful, bulbous chassis.</p>
+          <figure class="gallery__item gallery__item--2">
+            <img src="Beeper.webp" class="gallery__img" alt="Image 2">
+          </figure>
+          <p>People used to say “beep me” and it was a really cool thing. If someone had a pager (aka, a beeper), they were extremely important. They had to be reachable at all times, but only in an archaic, indirect way: someone pages you and then you have to find a telephone and call them back.</p>
+          <figure class="gallery__item gallery__item--3">
+            <img src="Diary.webp" class="gallery__img" alt="Image 3">
+          </figure>
+          <p>If you were a kid, and you wanted to feel tech-savvy but didn’t have the need or the money for a Palm Pilot, you probably got an electronic diary. These candy-colored clamshell deals were completely useless. They stored names and addresses and dates and things, but on a tiny screen that was so difficult to navigate, it was easier to just write it all down.</p>
+          <figure class="gallery__item gallery__item--4">
+            <img src="Palm.webp" class="gallery__img" alt="Image 4">
+          </figure>
+          <p>Speaking of smart phones, let’s take a moment to remember the honorable Palm Pilot. Another trapping of Very Important Business People and the grandmother of hand-held computer devices, the Palm Pilot was a brand-new ’90s invention that changed the game.</p>
+        </div>
+      </div>
+      <div class="column side">
+        <h4 class='sizzle' align="center"><img src="new_Sizz.gif"></h4>
+        <div class="gallery">
+          <a target="_blank" href="">
+            <img src="RS00001.jpg" alt="" width="300" height="200">
+          </a>
+        </div>
+        <div class="gallery">
+          <a target="_blank" href="">
+            <img src="RS00002.jpg" alt="" width="300" height="200">
+          </a>
+        </div>
+        <div class="gallery">
+          <a target="_blank" href="">
+            <img src="RS00003.jpg" alt="" width="300" height="200">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class='MCLogo' align="center"><img src="mclogo.gif" >MasterCard&reg; Featured Supplier since December 1996
+      </div>
+      <h4 class='footerbanner' align="center"><img src="longall.gif"></h4>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>

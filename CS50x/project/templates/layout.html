@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+        <link href="/static/css/styles.css" rel="stylesheet">
+
+        <title>layout</title>
+
+    </head>
+
+    <style> a { color: white; } a:hover { color: lightgray; }</style>
+
+    <body>
+        <header class="header">
+            <div id="quiz">
+                <h1>quizford</h1>
+            </div>
+        </header>
+<!-- Nav bar-->
+        <div class="nav-container">
+            <nav class="navbar">
+                <h2><a href="/" id="navbar-logo">.XYZ</a></h2>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="/starthere" class="nav-links">START HERE</a></li>
+                    <li><a href="/spotlight" class="nav-links">SPOTLIGHT</a></li>
+                    <li><a href="/gallery" class="nav-links">GALLERY</a></li>
+                    <li><a href="/contact" class="nav-links nav-links-btn">Contact</a></li>
+                </ul>
+            </nav>
+
+            {% block content %}{% endblock %}
+
+            <script src="/static/script/app.js"></script>
+    </body>
+</html>

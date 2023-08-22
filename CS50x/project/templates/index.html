@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="container-fluid">
+        <h1  class="page-label"></h1>
+        <img id="landing_img" src="static/images/pixel_sort.jpg" alt="">
+
+        <button id="letter_btn" class="main-btn"><a href="#">Newsletter</a></button>
+
+    </div>
+<!-- Modal-->
+    <div class="modal" id="email-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+
+            <div class="modal-content-left">
+                <img id="modal-img" src="/static/images/backpiece.JPG" class="soft-edge-border" alt="">
+            </div>
+
+            <div class="modal-content-right">
+                <form action="/index" method="post" class="modal-form" id="form">
+                    <h1>Stay up to date on all things quizford.yxz</h1>
+                    <div class="form-validation">
+                        <input type="text" class="modal-input" id="name" name="name" spellcheck="false" placeholder="Your name">
+                        <p>Error Message</p>
+                    </div>
+                    <div class="form-validation">
+                        <input type="email" class="modal-input" id="email" name="email" spellcheck="false" placeholder="Your email address">
+                        <p>Error Message</p>
+                    </div>
+                    <input type="submit" class="modal-input-btn" value="Subscribe">
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

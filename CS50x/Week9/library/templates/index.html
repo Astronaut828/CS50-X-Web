@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1 class="mt-5">Library of {{ name }}</h1>
+        <form action="/" method="post">
+            <input name="page" type="text">
+            <button type="submit">
+                Go to page
+            </button>
+        </form>
+    <p class="text-break mt-3">
+        {{ random_string }}
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Search History
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in history %}
+                <tr>
+                    <td> {{ row["page"] }} </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

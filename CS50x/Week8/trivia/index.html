@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+            // TODO: Add code to check answers to questions / JAVA
+            document.addEventListener('DOMContentLoaded', function() {
+
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'lightgreen';
+                    document.querySelector('#feedback1').innerHTML = 'Correct answer!';
+                });
+
+                let incorrect = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrect[i].addEventListener('click', function() {
+                        incorrect[i].style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect answer!';
+                    });
+                }
+
+                document.querySelector('#check').addEventListener('click', function() {
+                    let input = document.querySelector('input');
+                    if (input.value === 'Benjamin Franklin') {
+                        input.style.backgroundColor = 'lightgreen';
+                        document.querySelector('#feedback2').innerHTML = 'Correct answer!';
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect answer!';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1><u>Trivia!</u></h1>
+            <h2>Who Said It? <br> Famous Quotes Quiz</h2>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <h3>Who said: “Whether you think you can or you think you can’t, you’re right.“?</h3>
+                <p id="feedback1"></p>
+                
+                <button class="incorrect">Mark Twain</button>
+                <button class="incorrect">Wayne Gretzky</button>
+                <button class="correct">Henry Ford</button>
+                <button class="incorrect">Winston Churchill</button>
+                <button class="incorrect">Thomas A. Edison</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <h3>Who said: “Tell me and I forget. Teach me and I remember. Involve me and I learn.”? </h3>
+                <p id="feedback2"></p>
+
+                <input type="text">
+                <button id="check">Check Answer</button>
+            </div>
+
+        </div>
+    </body>
+</html>

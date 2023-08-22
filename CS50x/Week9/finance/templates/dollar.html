@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Dollar
+{% endblock %}
+
+{% block main %}
+        <h3>You can add a $ amount between 0 and 1 million</h3>
+        <p></p>
+        <form action="/dollar" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" class="form-control mx-auto w-auto text-center" min="0" id="amount" name="amount" placeholder="Amount" type="text" oninput="validateAmount(this)">
+            </div>
+            <button class="btn btn-primary" type="submit">Add Ca$h</button>
+        </form>
+{% endblock %}

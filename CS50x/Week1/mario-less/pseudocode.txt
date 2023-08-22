@@ -1,0 +1,6 @@
+//Prompt user Input
+//Asking for pyramid size
+//Pyramid parts
+//Pyramid vertical loop
+//Horizontal and add spaces to build pyramid in nested loop
+// replace dots with spaces

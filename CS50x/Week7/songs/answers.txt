@@ -1,0 +1,35 @@
+Matching the songs that are most matching with the average of the column.
+Then finding similarities and finding a connection to the main types of Auras Spotify specifies on their page.
+The values of the songs that match the average values do not say a lot about the overall mood, it would be better to evaluate an aura by amount of plays and duration of playtime for that subset.
+As a second measure the most listened genres would probably give a good insight into the overall mood of the most played songs of the year.
+
+SELECT * FROM songs WHERE id IN (66, 23, 64);
++----+----------------+-----------+--------------+--------+-----+----------+-------------+---------+---------+-------------+
+| id |      name      | artist_id | danceability | energy | key | loudness | speechiness | valence |  tempo  | duration_ms |
++----+----------------+-----------+--------------+--------+-----+----------+-------------+---------+---------+-------------+
+| 23 | Mine           | 6         | 0.71         | 0.789  | 4   | -3.874   | 0.0722      | 0.717   | 142.929 | 131064      |
+| 64 | In My Blood    | 60        | 0.622        | 0.712  | 5   | -7.321   | 0.066       | 0.487   | 140.025 | 211360      |
+| 66 | God is a woman | 5         | 0.602        | 0.658  | 1   | -5.934   | 0.0558      | 0.268   | 145.031 | 197547      |
++----+----------------+-----------+--------------+--------+-----+----------+-------------+---------+---------+-------------+
+
+
+SELECT * FROM songs WHERE energy LIKE '0.65%' LIMIT 3;  // AVG(energy) = 0.65906
++----+----------------+-----------+--------------+--------+-----+----------+-------------+---------+---------+-------------+
+| id |      name      | artist_id | danceability | energy | key | loudness | speechiness | valence |  tempo  | duration_ms |
++----+----------------+-----------+--------------+--------+-----+----------+-------------+---------+---------+-------------+
+| 66 | God is a woman | 5         | 0.602        | 0.658  | 1   | -5.934   | 0.0558      | 0.268   | 145.031 | 197547      |
++----+----------------+-----------+--------------+--------+-----+----------+-------------+---------+---------+-------------+
+
+ SELECT * FROM songs WHERE danceability LIKE '0.71%' LIMIT 3;  // AVG(danceability) = 0.71646
++----+------+-----------+--------------+--------+-----+----------+-------------+---------+---------+-------------+
+| id | name | artist_id | danceability | energy | key | loudness | speechiness | valence |  tempo  | duration_ms |
++----+------+-----------+--------------+--------+-----+----------+-------------+---------+---------+-------------+
+| 23 | Mine | 6         | 0.71         | 0.789  | 4   | -3.874   | 0.0722      | 0.717   | 142.929 | 131064      |
++----+------+-----------+--------------+--------+-----+----------+-------------+---------+---------+-------------+
+
+SELECT * FROM songs WHERE valence LIKE '0.48%' LIMIT 3;  // AVG(valence) = 0.484443
++----+---------------------------+-----------+--------------+--------+-----+----------+-------------+---------+---------+-------------+
+| id |           name            | artist_id | danceability | energy | key | loudness | speechiness | valence |  tempo  | duration_ms |
++----+---------------------------+-----------+--------------+--------+-----+----------+-------------+---------+---------+-------------+
+| 64 | In My Blood               | 60        | 0.622        | 0.712  | 5   | -7.321   | 0.066       | 0.487   | 140.025 | 211360      |
++----+---------------------------+-----------+--------------+--------+-----+----------+-------------+---------+---------+-------------+
