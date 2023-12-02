@@ -1,5 +1,4 @@
-# CS50x 2023
-CS50x Coursework
+# CS50x Coursework
 
 Welcome to my repository for Harvard University's CS50x course, an immersive journey into computer science and programming. This repository is a collection of my work and learnings throughout the course.
 
